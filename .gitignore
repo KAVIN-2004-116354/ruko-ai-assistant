@@ -1,0 +1,4 @@
+wa-bridge/session/
+wa-bridge/node_modules/
+__pycache__/
+.venv/
