@@ -1,14 +1,12 @@
-version: '3.8'
-
 services:
-  wa-bridge:
-    build: ./wa-bridge
-    restart: unless-stopped
-    network_mode: "host"
-    volumes:
-      - ./wa-bridge/session:/app/session
-
-  email-agent:
+  assistant-email-agent:
     build: .
     restart: unless-stopped
-    network_mode: "host"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  assistant-wa-bridge:
+    build: ./wa-bridge
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
