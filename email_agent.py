@@ -16,7 +16,7 @@ TARGET_PHONE = "918883037979"                  # Replace with your WhatsApp numb
 
 MODEL_NAME = "qwen2.5"
 CHECK_INTERVAL_SECONDS = 60
-OLLAMA_HOST = "http://172.17.0.1:11434"  # Forces WSL2 to cross the bridge to your RTX 5050
+OLLAMA_HOST = "http://host.docker.internal:11434"  # Forces WSL2 to cross the bridge to your RTX 5050
 # =================================================
 
 def clean_subject(subject):
